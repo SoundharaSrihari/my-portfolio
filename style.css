@@ -1,64 +1,83 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Lato", sans-serif; /* Using a modern font like Lato */
     margin: 0;
     padding: 0;
 }
 
+/* Header */
 header {
-    background-color: #f1f1f1;
+    background-color: #34495e; /* Darker blue for contrast */
+    color: white; /* Text color contrast */
     padding: 20px;
     text-align: center;
 }
 
+h1, h2, h3 {
+    font-weight: normal; /* Remove bold for cleaner look */
+    margin-bottom: 10px; /* Consistent margin for headings */
+}
+
 h1 {
-    font-size: 2em;
+    font-size: 2.5em; /* Larger main heading */
 }
 
-h3 {
-    font-size: 1.2em;
-    margin-top: 5px;
-}
-
+/* Navigation */
 nav {
     background-color: #e0e0e0;
-    padding: 10px;
+    padding: 15px;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Evenly distribute links */
 }
 
 nav li {
-    display: inline-block;
-    margin-right: 20px;
+    display: inline-block; /* Not required with flexbox */
 }
 
 nav a {
     text-decoration: none;
     color: black;
+    padding: 5px 10px; /* Add some padding for links */
+    transition: background-color 0.2s ease-in-out; /* Add hover effect */
 }
 
+nav a:hover {
+    background-color: #f1f1f1; /* Change background color on hover */
+}
+
+/* Main content */
 main {
     padding: 20px;
 }
 
 section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-bottom: 30px; /* Increase margin for better separation */
+    border-bottom: 1px solid #ddd; /* Add a subtle border for structure */
+    padding-bottom: 15px; /* Add padding below the border */
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.6; /* Adjust line-height for readability */
 }
 
+/* Footer */
 footer {
-    background-color: #f1f1f1;
-    text-align: center;
+    background-color: #34495e; /* Match header color */
+    color: white; /* Text color contrast */
     padding: 10px;
+    text-align: center;
+}
+
+/* Responsiveness (optional) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        align-items: center; /* Center links horizontally */
+    }
 }
